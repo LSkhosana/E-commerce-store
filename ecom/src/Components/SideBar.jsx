@@ -1,0 +1,19 @@
+import Logo from "../Assets/Logo.jpg";
+
+function SideBar() {
+    return (
+      <aside className="h-screen">
+        <nav className="h-full flex flex-col bg-white border-r shadow-sm">
+            <div className="p-4 pb-2 flex justify-between items-center">
+            <img src={Logo} alt="" />
+
+
+            </div>
+
+
+        </nav>
+      </aside>
+    );
+  }
+  
+  export default SideBar ;
