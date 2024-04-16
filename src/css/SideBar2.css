@@ -1,0 +1,105 @@
+/* Bag-Area */
+.bag-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 72px 8px 8px;
+  gap: 10px;
+  position: absolute;
+  width: 345px;
+  height: 90%;
+  right: 0; /* Adjusted to position from the right */
+  top: 0px;
+  background-color: aqua;
+}
+
+/* Title */
+.title h3{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 8px;
+  gap: 10px;
+  width: 79px;
+  height: 65px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 39.06px;
+  line-height: 47px;
+  color: #1A1F16;
+  background-color: aquamarine;
+}
+
+/* Bag-Items */
+.bag-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 8px;
+  gap: 16px;
+  width: 288px;
+  height: 192px;
+}
+
+/* Row */
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 16px;
+  width: 272px;
+  height: 80px;
+}
+
+/* Bag-Item */
+.bag-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px;
+  gap: 16px;
+  width: 70px;
+  height: 70px;
+  background: #FFFFFF;
+  border-radius: 12px;
+}
+
+/* Product-Image */
+.product-image {
+  width: 64px;
+  height: 64px;
+}
+
+/* Image */
+.image {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: -15.5%;
+  bottom: -15.5%;
+
+}
+
+
+
+/* Button */
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 24px;
+  gap: 8px;
+  width: 140px;
+  height: 30px;
+  background: #1A1F16;
+  border-radius: 17px;
+}
+
+/* Icon */
+.icon {
+  width: 24px;
+  height: 24px;
+}
