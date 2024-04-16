@@ -11,10 +11,18 @@
   left: 16px;
   top: 1.56%;
   bottom: 1.56%;
-  background: blue;
+  border: solid #1a1f16;
   border-radius: 8px;
+  transition: width 0.3s ease;
 }
 
+.navbar.open {
+  width: 110px;
+}
+
+.nav-links-top.open {
+  width: 90px;
+}
 /* Nav-Links/Top */
 .nav-links-top {
   display: flex;
@@ -25,8 +33,8 @@
   gap: 32px;
   margin: 0 auto;
   width: 56px;
-  /* height: 268.71px; */
-  background-color: yellowgreen;
+  background-color: white;
+  transition: width 0.3s ease;
 }
 
 /* logo */
@@ -42,7 +50,6 @@
   border-radius: 10px;
 }
 
-
 /* Menu */
 .menu {
   display: flex;
@@ -53,7 +60,7 @@
   width: 40px;
   height: 40px;
   border-radius: 10px;
-  background-color: red;
+  background-color: white;
 }
 
 /* bag */
@@ -61,6 +68,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   padding: 7px;
   gap: 10px;
   width: 40px;
@@ -78,7 +86,7 @@
   padding: 7px;
   gap: 8px;
   width: 40px;
-  height: 40px;
+  height: 26px;
   background: #1a1f16;
   border-radius: 10px;
 }
@@ -88,9 +96,11 @@
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+  justify-content: center;
   padding: 8px;
   gap: 10px;
   margin: 0 auto;
   width: 56px;
   height: 56px;
 }
+
