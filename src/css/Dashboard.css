@@ -15,7 +15,7 @@ body {
   left: 122px;
   top: 0px;
   overflow-y: scroll;
-  /* background-color: red; */
+  /* background-color: yellow; */
 }
 
 /* Top-bar */
@@ -86,15 +86,6 @@ body {
   color: rgba(26, 31, 22, 0.5);
 }
 
-/* Content-Area */
-.content-area {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 8px 0px;
-  width: 905px;
-  height: 842px;
-}
 
 /* Row-01, Row-02, etc. */
 .content-row {
@@ -104,7 +95,8 @@ body {
   padding: 0px;
   gap: 16px;
   width: 905px;
-  height: 397px; /* Change height if needed */
+  height: 420px;
+  background-color: aquamarine;
 }
 
 /* Item-Card */
@@ -116,9 +108,9 @@ body {
   padding: 16px;
   gap: 8px;
   width: 223.36px;
-  height: 397px;
+  height: 330px;
   border-radius: 22px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: #60695c;
 }
 
 /* Product-Image */
@@ -127,18 +119,12 @@ body {
   justify-content: center;
   align-items: center;
   padding: 16px;
-  width: 191.36px;
-  height: 232px;
+  width: 153px;
+  height: 200px;
   background: #ffffff;
   border-radius: 22px;
 }
 
-/* Image */
-.image {
-  width: 159.36px;
-  height: 200px;
-  /* background: url(.png); */
-}
 
 /* Content */
 .content {
@@ -150,6 +136,7 @@ body {
   gap: 8px;
   width: 191.36px;
   height: 125px;
+  background-color: orange;
 }
 
 /* Item Name */
