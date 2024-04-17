@@ -11,9 +11,9 @@
   left: 16px;
   top: 1.56%;
   bottom: 1.56%;
-  border: solid #1a1f16;
   border-radius: 8px;
   transition: width 0.3s ease;
+  background-color: #ffffff;
 }
 
 .navbar.open {
@@ -43,7 +43,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 7px;
+  padding: 5px;
   width: 32px;
   /* height: 36.71px; */
   background: #ffffff;
@@ -55,7 +55,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 7px;
+  padding: 2px;
   gap: 10px;
   width: 40px;
   height: 40px;
@@ -103,4 +103,3 @@
   width: 56px;
   height: 56px;
 }
-
