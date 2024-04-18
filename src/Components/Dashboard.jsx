@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import SideBar from "./SideBar";
 import SideBar2 from "./Sidebar2";
 import "../css/Dashboard.css";
@@ -8,6 +8,7 @@ import bagadd from "../Assets/Bag add.svg"; // Import the bagadd icon
 function DashBoard() {
   const firstRowProducts = products.slice(0, 4);
   const secondRowProducts = products.slice(4, 8);
+  const [clickedItem, setClickedItem] = useState(null);
 
   // Ensure a fixed number of item cards for each row
   const renderFixedRow = (rowProducts) => {
@@ -21,8 +22,10 @@ function DashBoard() {
     });
 
     // Function to handle the click event of the view button
-    const handleClick = (id) => {
-      console.log("Clicked on item with ID:", id);
+    const handleClick = (id, imageUrl) => {
+      const logMessage = `Clicked on item with ID: ${id}, Image URL: ${imageUrl}`;
+      console.log(logMessage);
+      setClickedItem({ id, imageUrl });
     };
 
     // Render each item card
@@ -47,7 +50,10 @@ function DashBoard() {
                   {item.currency}
                   {item.price}
                 </div>
-                <div className="view" onClick={() => handleClick(item.id)}>
+                <div
+                  className="view"
+                  onClick={() => handleClick(item.id, item.imageUrl)}
+                >
                   <img src={bagadd} alt="Add to Bag" className="bag-icon" />
                 </div>
               </div>
@@ -84,7 +90,7 @@ function DashBoard() {
           <div className="content-row">{renderFixedRow(secondRowProducts)}</div>
         </div>
       </div>
-      <SideBar2 />
+      <SideBar2 selectedItem={clickedItem} />
     </>
   );
 }

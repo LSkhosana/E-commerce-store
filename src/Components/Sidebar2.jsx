@@ -1,6 +1,5 @@
 import React from "react";
 import "../css/SideBar2.css";
-import bag2 from "../Assets/Bag2.svg";
 
 const SideBar2 = () => {
   return (
@@ -10,15 +9,14 @@ const SideBar2 = () => {
       </div>
       <div className="bag-items">
         <div className="row">
-          <div className="bag-item">
-            {/* Your bag items */}
-          </div>
+          <div className="bag-item">{/* Your bag items */}</div>
         </div>
         <div className="row">{/* Other bag items */}</div>
       </div>
       <div className="button">
         <button>
-          <img src={bag2} alt="Logo" />
+          <img src={""} alt="Logo" />
+          <span>View Bag</span>
         </button>
       </div>
     </div>
