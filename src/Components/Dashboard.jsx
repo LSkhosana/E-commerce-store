@@ -22,18 +22,25 @@ function DashBoard() {
     // Render each item card
     return rowItems.map((item, index) => (
       <div key={index} className="item-card">
-        {item.empty ? ( 
+        {item.empty ? (
           <div className="empty-card">Empty</div>
         ) : (
           <>
             <div className="product-image">
-              <img src={item.imageUrl} alt={item.title} />
+              <img
+                src={item.imageUrl}
+                alt={item.title}
+                className="product-img"
+              />
             </div>
             <div className="content">
               <div className="item-name">{item.title}</div>
               <div className="small-description">{item.description}</div>
               <div className="action">
-                <div className="price">{item.currency}{item.price}</div>
+                <div className="price">
+                  {item.currency}
+                  {item.price}
+                </div>
                 <div className="view">View</div>
               </div>
             </div>
@@ -62,14 +69,10 @@ function DashBoard() {
         {/* Content-Area */}
         <div className="content-area">
           {/* First Row */}
-          <div className="content-row">
-            {renderFixedRow(firstRowProducts)}
-          </div>
+          <div className="content-row">{renderFixedRow(firstRowProducts)}</div>
 
           {/* Second Row */}
-          <div className="content-row">
-            {renderFixedRow(secondRowProducts)}
-          </div>
+          <div className="content-row">{renderFixedRow(secondRowProducts)}</div>
         </div>
       </div>
       <SideBar2 />

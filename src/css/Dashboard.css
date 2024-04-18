@@ -104,10 +104,16 @@ body {
   justify-content: center;
   align-items: center;
   padding: 16px;
-  width: 150px;
-  height: 200px;
-  background: #ffffff;
+  width: 170px;
+  height: 220px;
+  /* background: red ; */
+  background-color: white;
   border-radius: 22px;
+}
+
+.product-img {
+  width: 242px;
+  height: 100%;
 }
 
 /* Content */
@@ -130,12 +136,11 @@ body {
   font-size: 20px;
   line-height: 24px;
   color: #1a1f16;
-  background-color: aqua;
 }
 
 /* Small Description */
 .small-description {
-  width: 72px;
+  width: 112px;
   height: 19px;
   font-size: 16px;
   line-height: 19px;
@@ -160,7 +165,6 @@ body {
   height: 24px;
   font-size: 20px;
   color: black;
-  background-color: pink;
 }
 
 /* View */
@@ -168,4 +172,5 @@ body {
   width: 26px;
   height: 26px;
   /* background: url(../Assets/Bag2.svg); */
+  background-color: red;
 }
