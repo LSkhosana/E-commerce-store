@@ -77,14 +77,13 @@
   border-radius: 20px;
 }
 
-/* Icon */
+.button span {
+  color: white;
+  margin-top: 8px;
+}
+
+
 .icon {
   width: 24px;
   height: 24px;
 }
-/*
-.button button {
-  display: flex;
-  align-items: center;
-  background-color: #1a1f16;;
-} */

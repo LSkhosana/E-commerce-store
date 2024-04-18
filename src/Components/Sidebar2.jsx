@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../css/SideBar2.css";
+import cart from "../Assets/addcart.svg";
 
 const SideBar2 = ({ selectedItem }) => {
   const [bagItems, setBagItems] = useState([]);
@@ -39,10 +40,8 @@ const SideBar2 = ({ selectedItem }) => {
         ))}
       </div>
       <div className="button">
-        <button>
-          <img src={""} alt="Logo" />
-          <span>View Bag</span>
-        </button>
+        <img src={cart} alt="Logo" />
+        <span>View Bag</span>
       </div>
     </div>
   );
