@@ -3,6 +3,7 @@ import SideBar from "./SideBar";
 import SideBar2 from "./Sidebar2";
 import "../css/Dashboard.css";
 import products from "./ProductInfo";
+import bagadd from "../Assets/Bag add.svg"; // Import the bagadd icon
 
 function DashBoard() {
   const firstRowProducts = products.slice(0, 4);
@@ -18,6 +19,11 @@ function DashBoard() {
       const product = rowProducts[index];
       return product ? product : emptyCard;
     });
+
+    // Function to handle the click event of the view button
+    const handleClick = (id) => {
+      console.log("Clicked on item with ID:", id);
+    };
 
     // Render each item card
     return rowItems.map((item, index) => (
@@ -41,7 +47,9 @@ function DashBoard() {
                   {item.currency}
                   {item.price}
                 </div>
-                <div className="view">View</div>
+                <div className="view" onClick={() => handleClick(item.id)}>
+                  <img src={bagadd} alt="Add to Bag" className="bag-icon" />
+                </div>
               </div>
             </div>
           </>
@@ -57,11 +65,12 @@ function DashBoard() {
         <div className="top-bar">
           <div className="input">
             <div className="label">Search Item</div>
-
             <div className="input-field">
-              <div className="placeholder">
-                Apple Watch, Samsung S21, Macbook Pro,..
-              </div>
+              <input
+                type="text"
+                placeholder="Apple Watch, Samsung S21, Macbook Pro, ..."
+                className="placeholder"
+              />
             </div>
           </div>
         </div>
