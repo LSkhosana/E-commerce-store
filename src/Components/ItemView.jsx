@@ -4,6 +4,7 @@ import SideBar2 from "./Sidebar2";
 import "../css/ItemView.css"
 import watch from "../Assets/Watch.jpg"
 import bag from "../Assets/Name=bag-add.svg"
+import stars from "../Assets/Special.png"
 
 const products = [
   {
@@ -41,6 +42,7 @@ function ItemView() {
             <div className="product-details">
               <h1>{product.title}</h1>
               <h3>{product.description}</h3>
+              <img className="stars" src={stars} alt=""/>
               <p>{product.currency}{product.price}</p>
               <p>{product.detailedDescription[0]}</p>
             </div>
