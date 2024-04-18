@@ -125,11 +125,12 @@ body {
 
 /* Item Name */
 .item-name {
-  width: 110px;
+  width: 210px;
   height: 24px;
   font-size: 20px;
   line-height: 24px;
   color: #1a1f16;
+  background-color: aqua;
 }
 
 /* Small Description */
