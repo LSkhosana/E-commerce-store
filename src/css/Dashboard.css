@@ -1,0 +1,195 @@
+body {
+  background-color: #e7e7e7;
+}
+
+/* Content-Frame */
+.content-frame {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px;
+  gap: 10px;
+  position: absolute;
+  width: 1153px;
+  height: 999px;
+  left: 122px;
+  top: 0px;
+  overflow-y: scroll;
+  /* background-color: yellow; */
+}
+
+/* Top-bar */
+.top-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 8px;
+  gap: 10px;
+  width: 523px;
+  height: 99px;
+}
+
+/* Input */
+.input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 8px;
+  width: 507px;
+  height: 83px;
+}
+
+/* Label */
+.label {
+  display: flex;
+  align-items: center;
+  padding: 0px 8px;
+  gap: 10px;
+  width: 94px;
+  height: 19px;
+}
+
+/* Input-Field */
+.input-field {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  gap: 8px;
+  width: 507px;
+  height: 56px;
+  background: #ffffff;
+  box-shadow: 0px 4px 16px rgba(26, 31, 22, 0.15);
+  border-radius: 13px;
+}
+
+/* Input-Area */
+.input-area {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  gap: 10px;
+  width: 475px;
+  height: 40px;
+}
+
+/* Placeholder */
+.placeholder {
+  width: 459px;
+  height: 24px;
+  font-family: "Cabin";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: rgba(26, 31, 22, 0.5);
+}
+
+
+/* Row-01, Row-02, etc. */
+.content-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 16px;
+  width: 905px;
+  height: 420px;
+  background-color: aquamarine;
+}
+
+/* Item-Card */
+.item-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 16px;
+  gap: 8px;
+  width: 223.36px;
+  height: 330px;
+  border-radius: 22px;
+  background-color: #60695c;
+}
+
+/* Product-Image */
+.product-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  width: 153px;
+  height: 200px;
+  background: #ffffff;
+  border-radius: 22px;
+}
+
+
+/* Content */
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 8px;
+  gap: 8px;
+  width: 191.36px;
+  height: 125px;
+  background-color: orange;
+}
+
+/* Item Name */
+.item-name {
+  width: 110px;
+  height: 24px;
+  font-family: "Cabin";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #1a1f16;
+}
+
+/* Small Description */
+.small-description {
+  width: 72px;
+  height: 19px;
+  font-family: "Cabin";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #60695c;
+}
+
+/* Action */
+.action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  gap: 10px;
+  width: 175.36px;
+  height: 50px;
+}
+
+/* Price */
+.price {
+  margin-left: auto;
+  width: 79.36px;
+  height: 24px;
+  font-family: "Cabin";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #1a1f16;
+}
+
+/* View */
+.view {
+  width: 26px;
+  height: 26px;
+  /* background: url(.png); */
+}
