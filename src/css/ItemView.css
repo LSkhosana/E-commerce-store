@@ -1,0 +1,42 @@
+.product-list{
+    margin-left: 10rem;
+    margin-right: 25rem;
+}
+
+.product {
+    display: flex;
+    margin-top: 10%;
+  }
+  
+  .product-details {
+    /* Add styles to display product-details to the right */
+    margin-left: 50px; /* Add some space between product-details and Container */
+  }
+  
+  .Container {
+    display: flex;
+    justify-content: space-between; /* Ensure product-details is to the right */
+  }
+  
+  
+  .bigImage {
+    margin-left:1rem ; /* Add some space between bigImg and smallImg */
+    border-radius: 0.5rem;
+  }
+  
+  .smallImg {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .smallImage {
+    width: 3rem; /* Adjust the width as needed */
+    height: 4rem; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Add some space between images */
+    border-radius: 0.5rem;
+  }
+
+  .product-details h1 {
+    font-size: 3rem;
+    margin-top: -0.1px; /* Use negative margin-top to move the element up */
+}
