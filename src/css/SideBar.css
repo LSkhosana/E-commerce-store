@@ -9,7 +9,7 @@
   position: fixed;
   width: 70px;
   left: 16px;
-  top: 1.56%;
+  top: 16px;
   bottom: 1.56%;
   border-radius: 8px;
   transition: width 0.3s ease;
@@ -23,7 +23,7 @@
 .nav-links-top.open {
   width: 90px;
 }
-/* Nav-Links/Top */
+
 .nav-links-top {
   display: flex;
   flex-direction: column;
@@ -31,63 +31,50 @@
   align-items: center;
   padding: 8px;
   gap: 32px;
-  margin: 0 auto;
-  width: 56px;
-  background-color: white;
+  /* margin: 0 auto; */
   transition: width 0.3s ease;
 }
 
-/* logo */
 .logo {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 5px;
-  width: 32px;
-  /* height: 36.71px; */
-  background: #ffffff;
-  border-radius: 10px;
+  padding: 8px;
+  top: 13px;
+  left: 10px;
+  border-radius: 4px;
 }
 
-/* Menu */
 .menu {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 2px;
+  padding: 8px;
   gap: 10px;
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
-  background-color: white;
 }
 
-/* bag */
 .Bag {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding: 7px;
+  padding: 8px;
   gap: 10px;
-  width: 40px;
-  height: 40px;
   border-radius: 10px;
   background-color: #ffffff;
 }
 
-/* home */
 .home {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 7px;
+  padding: 8px;
   gap: 8px;
-  width: 40px;
-  height: 26px;
-  background: #1a1f16;
+  width: 24px;
+  height: 24px;
+  background: black;
   border-radius: 10px;
 }
 
