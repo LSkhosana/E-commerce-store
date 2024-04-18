@@ -1,24 +1,76 @@
+import React from "react";
 import SideBar from "./SideBar";
 import SideBar2 from "./Sidebar2";
 import "../css/Dashboard.css";
+import products from "./ProductInfo";
+import bagadd from "../Assets/Bag add.svg"; // Import the bagadd icon
 
 function DashBoard() {
+  const firstRowProducts = products.slice(0, 4);
+  const secondRowProducts = products.slice(4, 8);
+
+  // Ensure a fixed number of item cards for each row
+  const renderFixedRow = (rowProducts) => {
+    const fixedNumberOfCards = 4;
+    const emptyCard = { empty: true };
+
+    // Fill the row with product cards or empty cards
+    const rowItems = Array.from({ length: fixedNumberOfCards }, (_, index) => {
+      const product = rowProducts[index];
+      return product ? product : emptyCard;
+    });
+
+    // Function to handle the click event of the view button
+    const handleClick = (id) => {
+      console.log("Clicked on item with ID:", id);
+    };
+
+    // Render each item card
+    return rowItems.map((item, index) => (
+      <div key={index} className="item-card">
+        {item.empty ? (
+          <div className="empty-card">Empty</div>
+        ) : (
+          <>
+            <div className="product-image">
+              <img
+                src={item.imageUrl}
+                alt={item.title}
+                className="product-img"
+              />
+            </div>
+            <div className="content">
+              <div className="item-name">{item.title}</div>
+              <div className="small-description">{item.description}</div>
+              <div className="action">
+                <div className="price">
+                  {item.currency}
+                  {item.price}
+                </div>
+                <div className="view" onClick={() => handleClick(item.id)}>
+                  <img src={bagadd} alt="Add to Bag" className="bag-icon" />
+                </div>
+              </div>
+            </div>
+          </>
+        )}
+      </div>
+    ));
+  };
+
   return (
     <>
       <SideBar />
       <div className="content-frame">
-        {/* Top-bar */}
         <div className="top-bar">
-          {/* Input */}
           <div className="input">
-            {/* Label */}
             <div className="label">Search Item</div>
-            {/* Input-Field */}
             <div className="input-field">
-              {/* Placeholder */}
-              <div className="placeholder">
-                Apple Watch,Samsung S21,Macbook Pro,..
-              </div>
+              <input
+                type="text"
+                placeholder="Apple Watch, Samsung S21, Macbook Pro, ..."
+                className="placeholder"
+              />
             </div>
           </div>
         </div>
@@ -26,58 +78,10 @@ function DashBoard() {
         {/* Content-Area */}
         <div className="content-area">
           {/* First Row */}
-          <div className="content-row">
-            {Array.from({ length: 4 }, (_, index) => (
-              <div key={index} className="item-card">
-                {/* Product-Image */}
-                <div className="product-image">
-                  {/* Image */}
-                  <div className="image">Image</div>
-                </div>
-                {/* Content */}
-                <div className="content">
-                  {/* Item Name */}
-                  <div className="item-name">Item Name</div>
-                  {/* Small Description */}
-                  <div className="small-description">Small Description</div>
-                  {/* Action */}
-                  <div className="action">
-                    {/* Price */}
-                    <div className="price">Price</div>
-                    {/* View */}
-                    <div className="view">View</div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+          <div className="content-row">{renderFixedRow(firstRowProducts)}</div>
 
           {/* Second Row */}
-          <div className="content-row">
-            {Array.from({ length: 4 }, (_, index) => (
-              <div key={index} className="item-card">
-                {/* Product-Image */}
-                <div className="product-image">
-                  {/* Image */}
-                  <div className="image">Image</div>
-                </div>
-                {/* Content */}
-                <div className="content">
-                  {/* Item Name */}
-                  <div className="item-name">Item Name</div>
-                  {/* Small Description */}
-                  <div className="small-description">Small Description</div>
-                  {/* Action */}
-                  <div className="action">
-                    {/* Price */}
-                    <div className="price">Price</div>
-                    {/* View */}
-                    <div className="view">View</div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+          <div className="content-row">{renderFixedRow(secondRowProducts)}</div>
         </div>
       </div>
       <SideBar2 />
