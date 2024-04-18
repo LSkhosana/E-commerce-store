@@ -6,13 +6,15 @@ const SideBar2 = ({ selectedItem }) => {
 
   useEffect(() => {
     if (selectedItem) {
-      setBagItems(prevBagItems => {
-        const newBagItem = { id: prevBagItems.length + 1, imageUrl: selectedItem.imageUrl };
+      setBagItems((prevBagItems) => {
+        const newBagItem = {
+          id: prevBagItems.length + 1,
+          imageUrl: selectedItem.imageUrl,
+        };
         return [...prevBagItems, newBagItem];
       });
     }
   }, [selectedItem]); // Include selectedItem in the dependency array
-
 
   // Group bag items into rows of three
   const rows = [];

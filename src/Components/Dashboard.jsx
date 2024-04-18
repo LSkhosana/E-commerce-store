@@ -3,7 +3,7 @@ import SideBar from "./SideBar";
 import SideBar2 from "./Sidebar2";
 import "../css/Dashboard.css";
 import products from "./ProductInfo";
-import bagadd from "../Assets/Bag add.svg"; 
+import bagadd from "../Assets/Bag add.svg";
 
 function DashBoard() {
   const firstRowProducts = products.slice(0, 4);
