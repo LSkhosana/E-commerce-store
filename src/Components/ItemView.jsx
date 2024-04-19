@@ -1,60 +1,74 @@
-import React from 'react';
+import React from "react";
 import SideBar from "./SideBar";
 import SideBar2 from "./Sidebar2";
-import "../css/ItemView.css"
-import bag from "../Assets/Name=bag-add.svg"
-import stars from "../Assets/Special.png"
-import products from './ProductInfo';
-
+import "../css/ItemView.css";
+import bag from "../Assets/Name=bag-add.svg";
+import stars from "../Assets/Special.png";
+import { useLocation } from "react-router-dom"; // Import useLocation from react-router-dom
 
 function ItemView() {
-    return (
-     <> 
+  // Access location state to get the item data passed from Dashboard component
+  const location = useLocation();
+  const { item } = location.state;
+
+  return (
+    <>
       <SideBar />
       <div className="product-list">
-        {products.map(product => (
-          <div className="product" key={product.id}>
-           <div className="Container">
-              <div className="smallImg">
-                <img className="smallImage" src={product.imageUrl} alt={product.title} />
-                <img className="smallImage" src={product.imageUrl} alt={product.title} />
-                <img className="smallImage" src={product.imageUrl} alt={product.title} />
-               </div>
-              <div className="bigImg">
-                <img className="bigImage" src={product.imageUrl} alt={product.title} />
-              </div>
-          </div>
-            <div className="product-details">
-              <h1>{product.title}</h1>
-              <h3>{product.description}</h3>
-              <img className="stars" src={stars} alt=""/>
-              <p>{product.currency}{product.price}</p>
-              <p>{product.detailedDescription[0]}</p>
+        {/* Render item details */}
+        <div className="product" key={item.id}>
+          <div className="Container">
+            <div className="smallImg">
+              {/* Render small images */}
+              <img
+                className="smallImage"
+                src={item.imageUrl}
+                alt={item.title}
+              />
+              <img
+                className="smallImage"
+                src={item.imageUrl}
+                alt={item.title}
+              />
+              <img
+                className="smallImage"
+                src={item.imageUrl}
+                alt={item.title}
+              />
+            </div>
+            <div className="bigImg">
+              {/* Render big image */}
+              <img className="bigImage" src={item.imageUrl} alt={item.title} />
             </div>
           </div>
-        ))}
+          <div className="product-details">
+            <h1>{item.title}</h1>
+            <h3>{item.description}</h3>
+            <img className="stars" src={stars} alt="" />
+            <p>
+              {item.currency}
+              {item.price}
+            </p>
+            <p>{item.detailedDescription[0]}</p>
+          </div>
+        </div>
       </div>
       <div className="button2">
         <button>
           <img src={bag} alt="Logo" />
         </button>
       </div>
-      <br></br><br></br>
+      <br></br>
+      <br></br>
       <hr></hr>
       <div className="paragraph">
         <h1>Description</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim odio faucibus nec malesuada purus volutpat vel sed viverra. Id sagittis, phasellus dui in arcu. Nec arcu, sit nunc, nibh purus pellentesque sagittis. Felis rhoncus facilisis massa eget purus in purus. Etiam at cras nulla nunc. Malesuada in pretium diam scelerisque sit mattis in egestas neque. Eu porta tempor sodales nisl integer turpis porttitor sed sed. Ut senectus odio dictum enim velit tempor diam quisque suspendisse.
-            Orci vel ridiculus diam viverra. Libero malesuada orci, quis placerat suscipit augue imperdiet. Et praesent augue dictum mauris eget lacus malesuada. Aenean nisi, sodales natoque massa magna dignissim mi. Mattis tellus, justo, lorem sed tempor diam sit viverra enim. Id id placerat eu etiam nulla laoreet.
-            Dignissim leo fames turpis quis suspendisse vulputate laoreet vulputate ac. Aliquam justo lectus eu dui porttitor. Cras a aliquam phasellus sollicitudin ornare. Tristique volutpat facilisis in ut proin. Est vitae facilisi sollicitudin id lorem mattis nibh ipsum, nec. Consectetur consectetur morbi morbi aliquet mi risus, velit, sit at. Integer morbi viverra hendrerit risus.
-            Odio phasellus nibh senectus nec id enim quam sed. At potenti sollicitudin sollicitudin lobortis morbi. Nunc molestie et adipiscing aliquam. Sit vel mi dolor suscipit. In eget ut ac at facilisi leo viverra. Arcu ac ut fermentum, viverra et, vitae etiam cras. Eu purus non ut turpis fusce. Mi vitae nibh mi ut feugiat varius risus eros.
-
-        </p>
+        <p>{item.detailedDescription[1]}</p>
+        {/* second part of detailed  */}
       </div>
       <SideBar2 />
-      
     </>
+  );
+}
 
-    );
-  }
-  
-  export default ItemView ;
+export default ItemView;
