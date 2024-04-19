@@ -56,6 +56,11 @@
     background: #1A1F16;
     border-radius: 17px;
 }
+.button2 span {
+    color: white;
+    margin-top: 8px;
+  }
+  
 
 hr {
     border: none; /* Remove the default border */

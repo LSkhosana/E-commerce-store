@@ -2,24 +2,25 @@ import React from 'react';
 import SideBar from "./SideBar";
 import SideBar2 from "./Sidebar2";
 import "../css/ItemView.css"
-import watch from "../Assets/Watch.jpg"
+// import watch from "../Assets/Watch.jpg"
 import bag from "../Assets/Name=bag-add.svg"
 import stars from "../Assets/Special.png"
+import products from './ProductInfo';
 
-const products = [
-  {
-    id: 1,
-    title: "Apple watch",
-    description: "Series 5 SE",
-    rating: "",
-    price: 529.99,
-    currency: "$",
-    imageUrl: watch,
-    detailedDescription: [
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur ipsum rem exercitationem, vitae nesciunt tempora cumque laboriosam minima, temporibus suscipit aperiam dolor. Quibusdam architecto vitae delectus iure voluptates error repellendus!",
-    ],
-  }
-];
+// const products = [
+//   {
+//     id: 1,
+//     title: "Apple watch",
+//     description: "Series 5 SE",
+//     rating: "",
+//     price: 529.99,
+//     currency: "$",
+//     imageUrl: watch,
+//     detailedDescription: [
+//       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur ipsum rem exercitationem, vitae nesciunt tempora cumque laboriosam minima, temporibus suscipit aperiam dolor. Quibusdam architecto vitae delectus iure voluptates error repellendus!",
+//     ],
+//   }
+// ];
 
 
 function ItemView() {
