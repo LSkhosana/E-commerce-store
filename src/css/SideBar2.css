@@ -1,36 +1,27 @@
-/* Bag-Area */
 .bag-area {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 7px 8px 8px 8px;
+  padding: 72px, 8px, 8px, 8px;
   gap: 10px;
   position: fixed;
-  width: 320px;
+  width: 345px;
   height: 99%;
   right: 0;
   top: 0px;
-  background-color: aqua;
+  /* background-color: pink; */
 }
 
-/* Title */
-.title h3{
+.title h3 {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
-  /* padding: 8px; */
+  text-align: center;
+  padding: 8px;
   gap: 10px;
-  width: 79px;
-  height: 55px;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 39.06px;
-  line-height: 47px;
-  color: #1A1F16;
-  background-color: white ;
+  font-size: 29.06px;
+  color: #1a1f16;
 }
 
-/* Bag-Items */
 .bag-items {
   display: flex;
   flex-direction: column;
@@ -38,12 +29,9 @@
   align-items: flex-start;
   padding: 8px;
   gap: 16px;
-  width: 288px;
-  height: 192px;
-  background-color: red;
+  /* background-color: red; */
 }
 
-/* Row */
 .row {
   display: flex;
   flex-direction: row;
@@ -52,39 +40,29 @@
   gap: 16px;
   width: 274px;
   height: 80px;
-  background-color: yellow;
+  margin-bottom: 16px;
+  /* background-color: yellow; */
 }
 
-/* Bag-Item */
 .bag-item {
   display: flex;
   flex-direction: row;
   align-items: center;
   padding: 8px;
   gap: 16px;
-  width: 70px;
-  height: 70px;
-  background: #FFFFFF;
+  /* width: 80px; */
+  height: 80px;
+  background:  white;
   border-radius: 12px;
+  overflow: hidden;
 }
 
-/* Product-Image */
-.product-image {
-  width: 64px;
-  height: 64px;
+.bag-item img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 }
 
-/* Image */
-.image {
-  position: absolute;
-  left: 0%;
-  right: 0%;
-  top: -15.5%;
-  bottom: -15.5%;
-
-}
-
-/* Button */
 .button {
   margin-top: 5px;
   display: flex;
@@ -92,14 +70,19 @@
   justify-content: center;
   align-items: center;
   padding: 8px 24px;
-  gap: 80px;
-  width: 140px;
+  gap: 8px;
   height: 30px;
-  background: #1A1F16;
-  border-radius: 17px;
+  width: 119px;
+  background: #1a1f16;
+  border-radius: 20px;
 }
 
-/* Icon */
+.button span {
+  color: white;
+  margin-top: 8px;
+}
+
+
 .icon {
   width: 24px;
   height: 24px;
