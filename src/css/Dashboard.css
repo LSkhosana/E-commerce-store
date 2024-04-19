@@ -113,7 +113,8 @@ body {
 }
 
 .product-img {
-  width: 242px;
+  /* do not uncomment width, unless you want to cry  */
+  /* width: 242px; */
   height: 100%;
 }
 
