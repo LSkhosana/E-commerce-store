@@ -14,7 +14,8 @@ body {
   height: 999px;
   left: 122px;
   top: 0px;
-  overflow-y: scroll;
+  overflow: hidden;
+  /* overflow-y: scroll; */
   /* background-color: yellow; */
 }
 
@@ -70,9 +71,9 @@ body {
   font-size: 20px;
   padding: 8px;
   gap: 10px;
-  color: #1A1F1680;
+  color: #1a1f1680;
   margin-left: 15px;
-  border: 1px solid white ;
+  border: 1px solid white;
   outline: none;
   /* background-color: firebrick; */
 }
@@ -113,7 +114,8 @@ body {
 }
 
 .product-img {
-  width: 242px;
+  /* do not uncomment width, unless you want to cry  */
+  /* width: 242px; */
   height: 100%;
 }
 
