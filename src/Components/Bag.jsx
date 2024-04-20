@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-import SideBar from "./SideBar";
 import SideBar2 from "./Sidebar2";
-import "../css/Dashboard.css";
-import "../css/ShoppingCart.css";
+// import "../css/ShoppingCart.css";
 import products from "./ProductInfo";
 import bagadd from "../Assets/Bag add.svg";
 
