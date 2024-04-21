@@ -4,6 +4,7 @@
 function AddAdress() {
     return (
       <>
+      <div className="ccontainers">
        <div className="bottom-container">
           <form>
             <div className="form-group">
@@ -43,7 +44,7 @@ function AddAdress() {
           </form>
         
         </div>
-
+      </div>
       </>
     );
   }
