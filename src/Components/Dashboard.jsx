@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import SideBar from "./SideBar";
 import SideBar2 from "./Sidebar2";
 import "../css/Dashboard.css";
@@ -8,36 +9,44 @@ import bagadd from "../Assets/Bag add.svg";
 function DashBoard() {
   const [clickedItem, setClickedItem] = useState(null);
   const [searchQuery, setSearchQuery] = useState("");
+  const navigate = useNavigate();
 
-  // Function to handle the click event of the view button
   const handleClick = (id, imageUrl) => {
     const logMessage = `Clicked on item with ID: ${id}, Image URL: ${imageUrl}`;
     console.log(logMessage);
     setClickedItem({ id, imageUrl });
   };
 
-  // Filter products based on search query
+  const handleImageClick = (id) => {
+    const clickedItem = products.find((item) => item.id === id);
+    if (clickedItem) {
+      navigate(`/item/${clickedItem.id}`, { state: { item: clickedItem } });
+    } else {
+      console.error(`Item with ID ${id} not found.`);
+    }
+  };
+
   const filteredProducts = products.filter((product) =>
     product.title.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-  // Ensure a fixed number of item cards for each row
   const renderFixedRow = (rowProducts) => {
     const fixedNumberOfCards = 4;
     const emptyCard = { empty: true };
 
-    // Fill the row with product cards or empty cards
     const rowItems = Array.from({ length: fixedNumberOfCards }, (_, index) => {
       const product = rowProducts[index];
       return product ? product : emptyCard;
     });
 
-    // Render non-empty cards maintaining original order
     return rowItems.map((item, index) => {
-      if (item.empty) return null; // Skip rendering empty cards
+      if (item.empty) return null;
       return (
         <div key={index} className="item-card">
-          <div className="product-image">
+          <div
+            className="product-image"
+            onClick={() => handleImageClick(item.id)} 
+          >
             <img src={item.imageUrl} alt={item.title} className="product-img" />
           </div>
           <div className="content">
@@ -80,14 +89,10 @@ function DashBoard() {
           </div>
         </div>
 
-        {/* Content-Area */}
         <div className="content-area">
-          {/* First Row */}
           <div className="content-row">
             {renderFixedRow(filteredProducts.slice(0, 4))}
           </div>
-
-          {/* Second Row */}
           <div className="content-row">
             {renderFixedRow(filteredProducts.slice(4, 8))}
           </div>
