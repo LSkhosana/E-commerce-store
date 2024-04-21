@@ -29,7 +29,7 @@ function AddPayment() {
                 <input type="text" id="cardNumber" placeholder="5126-5987-2214-7621" />
               </div>
             </div>
-          <div className="form-group">
+          
             <div className="Date">
              <label>Expiry Date</label>
              {/* <input type="Date" id="Date" placeholder="" /> */}
@@ -41,11 +41,12 @@ function AddPayment() {
              {/* <input type="Date" id="Date" placeholder="" /> */}
              <input type="numeric" id="CVC" placeholder="123" />
             </div>
-        </div>
+        
 
 
             
           </form>
+        
         </div>
 
 
