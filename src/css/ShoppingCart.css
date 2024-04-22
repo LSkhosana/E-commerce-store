@@ -53,6 +53,21 @@
   margin-left: -1rem;
 }
 
+.quantity {
+  display: flex;
+  flex-direction: row;
+  margin-left: 30rem;
+  margin-top: -3.4rem;
+
+}
+
+.quantity img#decr {
+  margin-left: 0.5rem; /* Adjusted margin to move the minus button to the left */
+}
+
+.quantity img#incr {
+  margin-right: 0.5rem; /* Adjusted margin to move the minus button to the left */
+}
 
 
 

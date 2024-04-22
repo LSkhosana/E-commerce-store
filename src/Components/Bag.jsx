@@ -4,6 +4,8 @@ import "../css/ShoppingCart.css";
 import products from "./ProductInfo";
 // import bagadd from "../Assets/Bag add.svg";
 import SideBar from "./SideBar";
+import plus from "../Assets/Increase-Button.svg"
+import minus from "../Assets/Decrease-Button.svg"
 
 
 function Bag() {
@@ -25,6 +27,12 @@ function Bag() {
                     <p id="disc">{product.shortDescription}</p>
                     <img src={product.rating} alt={product.title} />
                     <p>{product.currency}{product.price}</p>
+                    <div className="quantity">
+                      <img id="incr" src={plus} alt="plus" />
+                      <p>1</p>
+                      <img id="decr" src={minus} alt="minus"/>
+                    </div>
+
                     {/* Add more product information here if needed */}
                 </div>
             </div>
