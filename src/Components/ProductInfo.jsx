@@ -4,13 +4,17 @@ import iphoneblack from "../Assets/Iphone11black.jpg";
 import iphoneblue from "../Assets/Name=Iphone-12-02.jpg";
 import iphonewhite from "../Assets/Name=Iphone-12-04.jpg";
 import iphonered from "../Assets/Name=Iphone-12-03.jpg";
+import stars from "../Assets/Special.png";
+
+
 
 const products = [
   {
     id: 1,
     title: "Apple Watch",
     description: "Series 5 SE",
-    rating: "",
+    shortDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam",
+    rating: stars,
     price: 529.99,
     currency: "$",
     imageUrl: watchImage,
@@ -23,7 +27,8 @@ const products = [
     id: 2,
     title: "Sony ZX33OBT",
     description: "Light Grey",
-    rating: "",
+    shortDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam",
+    rating: stars,
     price: 39.99,
     currency: "$",
     imageUrl: Sonyz23,
@@ -36,7 +41,8 @@ const products = [
     id: 3,
     title: "Iphone 11",
     description: "Serious Black",
-    rating: "",
+    shortDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam",
+    rating: stars,
     price: 619.99,
     currency: "$",
     imageUrl: iphoneblack,
@@ -49,7 +55,8 @@ const products = [
     id: 4,
     title: "Iphone 11",
     description: "Subway Blue",
-    rating: "",
+    shortDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam",
+    rating: stars,
     price: 619.99,
     currency: "$",
     imageUrl: iphoneblue,
@@ -62,7 +69,8 @@ const products = [
     id: 5,
     title: "Iphone 11",
     description: "Product Red",
-    rating: "",
+    shortDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam",
+    rating: stars,
     price: 619.99,
     currency: "$",
     imageUrl: iphonered,
@@ -75,7 +83,8 @@ const products = [
     id: 6,
     title: "Iphone 11",
     description: "Milky White",
-    rating: "",
+    shortDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam",
+    rating: stars,
     price: 619.99,
     currency: "$",
     imageUrl: iphonewhite,
@@ -88,7 +97,8 @@ const products = [
     id: 7,
     title: "Iphone 13",
     description: "Product Red",
-    rating: "",
+    shortDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam",
+    rating: stars,
     price: 619.99,
     currency: "$",
     imageUrl: iphonered,
@@ -101,7 +111,8 @@ const products = [
     id: 8,
     title: "Iphone 14",
     description: "Product Red",
-    rating: "",
+    shortDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam",
+    rating: stars,
     price: 619.99,
     currency: "$",
     imageUrl: iphonered,
